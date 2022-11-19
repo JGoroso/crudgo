@@ -1,0 +1,50 @@
+{{ define "edit" }}
+{{ template "head" }}
+
+
+
+<div class="card">
+    <div class="card-header">
+      Update Employee
+    </div>
+
+
+    <div class="card-body">
+
+ 
+       <form method="post" action="/update">
+         
+          <div class="form-group">
+            <div class="form-group col-md-4">
+              <label class="sr-only" for="inputName">Hidden input label</label>
+              <input type="Hidden" class="form-control" name="id" value={{.Id}}  id="id" placeholder="">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="form-group col-md-4">
+              <label for="inputPassword4">Name</label>
+              <input type="text" class="form-control" id="inputName" value={{.Name}} name="inputName" placeholder="Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-group col-md-4">
+              <label for="inputAddress">Email</label>
+              <input type="text" class="form-control" id="inputEmail" name="inputEmail" value={{.Email}} placeholder="name@name">
+            </div>
+          </div>
+
+          <div class="form-group col-md-4">
+            <button type="submit" class="btn btn-success"> Update employee </button>
+            <a name="" id="" class="btn btn-primary" href="/" role="button">Back to index</a>
+          </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+{{ template "footer" }}
+{{ end }}
